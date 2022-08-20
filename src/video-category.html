@@ -1,0 +1,43 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Features Category", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"video", "nav":"true"})
+        </header>
+        <main class="content">
+            <section class="main">
+                @@include('components/page-blocks/_main2.html')
+            </section>
+
+            <section class="big-blog">
+                @@include('components/page-blocks/_big-blog2.html',{"img":"blog10","video":"true","title":"<span>Video</span> Old-school photographers grapple with NFTs: New world, new rules"})
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog-video.html',{"img1":"blog11","img2":"blog10","btn":""})
+            </section>
+
+            <section class="bitcoin-banner">
+                @@include('components/page-blocks/_bitcoin-banner.html')
+            </section>
+
+            <section class="big-blog">
+                @@include('components/page-blocks/_big-blog2.html',{"img":"video","video":"true","title":"<span>Video</span> Old-school photographers grapple with NFTs: New world, new rules"})
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog-video.html',{"img1":"blog10","img2":"blog11","btn":"true"})
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

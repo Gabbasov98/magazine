@@ -1,0 +1,53 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"About", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+        </header>
+        <main class="content">
+            <section class="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="about__content">
+                            <div class="about__title display1">Engaging reads, every week</div>
+                            <div class="about__subtitle text-l">This is where it gets interesting.</div>
+                            <div class="about__text body-l">
+                                <p>Cointelegraph Magazine is a new publication that goes beyond the daily news and delves much more deeply into the stories, trends, and personalities that inspire cryptocurrency and blockchain conversations around the world.</p>
+                                <p>People make the products that shape our lives. Mark Zuckerberg may be a hero or a villain, and he may be both — which is why we seek to understand Zuck when we try to decipher what Facebook adds to (or takes from) our lives.</p>
+                                <p>Cointelegraph Magazine is people-centric, delving into *why* the true believers of blockchain feel they can change the world (and why they think it needs to be changed).</p>
+                                <p>And equally importantly, it will illustrate how the implementation of this technology is affecting the lives of countless people — today, right now, not at some distant point in the future.</p>
+                                <p>It adds context and history to topics that seem arcane: for instance, making the key concepts behind decentralized finance (DeFi) accessible and comprehensible to many more people.</p>
+                                <p>It also employs Cointelegraph’s considerable design and development talent pool to create more immersive experiences for the reader, when a data visualization may be worth a thousand words.</p>
+                                <p>Cointelegraph Magazine explores this industry through long-form features, thoughtful analysis, and a little humor and satire.</p>
+                                <p>It’s a more leisurely approach to this rapid-fire business, combining a rewarding read with an opportunity to learn much more about cryptocurrency — and the various ways blockchain technology is contributing to the world.</p>
+                                <p>We hope you enjoy it.</p>
+                            </div>
+                            <div class="about__contact">
+                                <div class="about__contact-title display3">Interested in writing for us?</div>
+                                <div class="about__contact-desc body-l">Jackdaws love my big sphinx of quartz. The July sun caused a fragment of black pine wax to ooze on the velvet quilt.</div>
+                                <a href="" class="about__contact-link body-l">Contact us</a>
+                            </div>
+                        </div>
+
+                        <div class="subscribe subscribe--inner">
+                            @@include('components/page-blocks/_subscribe.html')
+                        </div>
+
+                        <div class="news-inner">
+                            @@include('components/page-blocks/_news-popular.html')
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

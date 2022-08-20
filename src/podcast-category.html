@@ -1,0 +1,35 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Features Category", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"podcasts", "nav":"true"})
+        </header>
+        <main class="content">
+            <section class="podcast-category">
+                <div class="container">
+                    <div class="podcast-category__items">
+                        <a href="" class="podcast-card">
+                            @@include('components/cards/_podcast-card.html',{"img":"podcast3","title":"<span>Podcast</span>  Fundamental Value with  Joshua  Frank"})
+                        </a>
+                        <a href="" class="podcast-card">
+                            @@include('components/cards/_podcast-card.html',{"img":"podcast4","title":"<span>Podcast</span>  Nonfungible with Darren Kleine"})
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bitcoin-banner">
+                @@include('components/page-blocks/_bitcoin-banner.html')
+            </section>
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

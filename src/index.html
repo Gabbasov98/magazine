@@ -1,0 +1,180 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Main", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header header--index">
+            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+        </header>
+        <main class="content">
+
+            <section class="main">
+                @@include('components/page-blocks/_main.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog","img2":"blog2","btn":""})
+            </section>
+
+            <section class="opinions">
+                <div class="container">
+                    <div class="opinions__inner">
+                        <div class="opinions__top">
+                        <div class="opinions__title display2">Opinions <br> & Columns</div>
+                        <div class="opinions__nav">
+                            <div class="swiper-button-prev">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M35.9998 4.23223L3.99981 4.23223L3.99981 36.2322L7.99981 36.2322L7.99981 11.7678L32.732 36.5L36.2676 32.9645L11.5353 8.23223L35.9998 8.23223L35.9998 4.23223Z" fill="#171A1C"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00019 36.7678H36.0002L36.0002 4.76777H32.0002L32.0002 29.2322L7.26796 4.5L3.73242 8.03554L28.4647 32.7678H4.00019V36.7678Z" fill="#171A1C"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="opinions__slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="opinion-card">
+                                            @@include('components/cards/_opinion-card.html',{"img":"opinion","title":"<span>6 Questions</span> for Annabelle Huang of Amber Group"})
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="opinion-card">
+                                            @@include('components/cards/_opinion-card.html',{"img":"opinion2","title":"<span>Journeys</span> You can transform the world with blockchain: Dr. Jane Thomason"})
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="opinion-card">
+                                            @@include('components/cards/_opinion-card.html',{"img":"opinion3","title":"<span>6 Questions</span> for Lisa Fridman of Quadrata"})
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="opinion-card">
+                                            @@include('components/cards/_opinion-card.html',{"img":"opinion2","title":"<span>Journeys</span> You can transform the world with blockchain: Dr. Jane Thomason"})
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="opinion-card">
+                                            @@include('components/cards/_opinion-card.html',{"img":"opinion3","title":"<span>6 Questions</span> for Lisa Fridman of Quadrata"})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bitcoin-banner">
+                @@include('components/page-blocks/_bitcoin-banner.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="subscribe">
+                @@include('components/page-blocks/_subscribe.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="video">
+                <div class="container">
+                    <div class="video__title display2">Video</div>
+                    <div class="video__slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <a href="" class="swiper-slide video-card video-card--big">
+                                    @@include('components/cards/_video-card.html',{"img":"video"})
+                                </a>
+                                <a href="" class="swiper-slide video-card">
+                                    @@include('components/cards/_video-card.html',{"img":"video2"})
+                                </a>
+                                <a href="" class="swiper-slide video-card">
+                                    @@include('components/cards/_video-card.html',{"img":"video"})
+                                </a>
+                                <a href="" class="swiper-slide video-card">
+                                    @@include('components/cards/_video-card.html',{"img":"video3"})
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="" class="video__all btn btn-white-outline">MORE CLIPS</a>
+                </div>
+            </section>
+
+            <section class="big-blog">
+                @@include('components/page-blocks/_big-blog.html',{"img":"blog3","video":"","title":"<span>Features</span> Old-school photographers grapple with NFTs: New world, new rules"})
+            </section>
+
+            <section class="adv-banner">
+                @@include('components/page-blocks/_adv-banner.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="podcast">
+                <div class="container">
+                    <div class="podcast__title display2">Podcasts</div>
+                    <div class="video__slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <a href="" class="swiper-slide podcast-card">
+                                    @@include('components/cards/_podcast-card.html',{"img":"podcast","title":"<span>Podcast</span>  Fundamental Value with  Joshua  Frank"})
+                                </a>
+                                <a href="" class="swiper-slide podcast-card">
+                                    @@include('components/cards/_podcast-card.html',{"img":"podcast2","title":"<span>Podcast</span>  Nonfungible with Darren Kleine"})
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="" class="video__all btn btn-white-outline">MORE EPISODES</a>
+                </div>
+            </section>
+
+            <section class="follow">
+                <div class="container">
+                    <div class="follow__inner">
+                        <div class="follow__title display2">Follow us in social</div>
+                        <div class="follow__items">
+                            <a href="" class="follow__link social-link social-link--fb btn">Facebook</a>
+                            <a href="" class="follow__link social-link social-link--tg btn">Telegram</a>
+                            <a href="" class="follow__link social-link social-link--tw btn">Twitter</a>
+                            <a href="" class="follow__link social-link social-link--yb btn">Youtube</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="news">
+                @@include('components/page-blocks/_news.html',{"main":"true"})
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":"true"})
+            </section>
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

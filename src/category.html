@@ -1,0 +1,58 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Features Category", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"features", "nav":"true"})
+        </header>
+        <main class="content">
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog","img2":"blog2","btn":""})
+            </section>
+
+            <section class="main">
+                @@include('components/page-blocks/_main.html')
+            </section>
+
+            <section class="big-blog">
+                @@include('components/page-blocks/_big-blog.html',{"img":"blog3","video":"","title":"<span>Features</span> Old-school photographers grapple with NFTs: New world, new rules"})
+            </section>
+
+            <section class="bitcoin-banner">
+                @@include('components/page-blocks/_bitcoin-banner.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="subscribe">
+                @@include('components/page-blocks/_subscribe.html')
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":""})
+            </section>
+
+            <section class="adv-banner">
+                @@include('components/page-blocks/_adv-banner.html')
+            </section>
+
+            <section class="news">
+                @@include('components/page-blocks/_news.html',{"main":""})
+            </section>
+
+            <section class="blog">
+                @@include('components/page-blocks/_blog.html',{"img1":"blog6","img2":"blog7","btn":"true"})
+            </section>
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

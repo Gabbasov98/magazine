@@ -1,0 +1,52 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"About", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+        </header>
+        <main class="content">
+            <section class="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="about__content">
+                            <div class="about__title display1">Get in touch</div>
+                            <div class="about__subtitle text-l">We are always happy to hear from readers with suggestions, comments, and ideas.</div>
+                            <div class="about__text body-l">
+                                <p>We’re also looking for experienced feature writers who can bring the blockchain space to life through stories that offer unique perspectives. If you’re interested in writing for us, please contact us with your story pitches, and links to your published work elsewhere.</p>
+                                <p>We are an inclusive publication and we encourage writers from all backgrounds to work with us.</p>
+                            </div>
+
+                            <form action="" class="about__form">
+                                <fieldset class="form-group">
+                                    <input type="text">
+                                    <label>Full name*</label>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input type="text">
+                                    <label>Email address*</label>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <textarea></textarea>
+                                    <label>Message*</label>
+                                </fieldset>
+                                <button class="about__form-btn btn btn-orange">send message</button>
+                            </form>
+                        </div>
+
+
+                        @@include('components/page-blocks/_news-popular.html')
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

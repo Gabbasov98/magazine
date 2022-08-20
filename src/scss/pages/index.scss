@@ -1,0 +1,782 @@
+@import "../vars";
+.main{
+  padding: 0 0 30px;
+  color: #FFFFFF;
+  .container{
+    &:hover{
+      color: inherit;
+    }
+  }
+  &__img{
+    position: relative;
+    img{
+      width: 100%;
+      display: block;
+      border-radius: 25px;
+    }
+  }
+  &__title{
+    padding: 0 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  &__props{
+    margin-top: 30px;
+    justify-content: center;
+  }
+  &__play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.props{
+  display: flex;
+  align-items: center;
+  &__item{
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    &:after{
+      content: '';
+      width: 1px;
+      height: 14px;
+      background-color: #fff;
+      display: inline-block;
+      margin: 0 10px;
+    }
+    &:last-child{
+      opacity: 0.5;
+      &:after{
+        display: none;
+      }
+    }
+    svg{
+      margin-right: 10px;
+    }
+  }
+}
+
+.blog{
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .blog-card{
+    &:nth-child(even){
+      margin-left: -1px;
+    }
+  }
+  &__link{
+    width: 100%;
+    height: 48px;
+    margin: 30px 0;
+    border-radius: 15px;
+  }
+}
+
+.opinions{
+  &__inner{
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border: 1px solid $dark;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title{
+    br{
+      display: none;
+    }
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+  }
+  &__slider{
+    margin-top: 40px;
+  }
+  .swiper{
+    &-button{
+      &-prev,
+      &-next{
+        margin-top: 0;
+        position: static;
+        width: 40px;
+        height: 40px;
+        &:hover{
+          path{
+            fill: $primary;
+          }
+        }
+      }
+      &-next{
+        margin-left: 15px;
+      }
+    }
+    &-slide{
+      width: 300px;
+      &-prev{
+        opacity: 0;
+      }
+      @media screen and (min-width: 992px){
+        .opinion-card{
+          transform: translateX(140px);
+        }
+        &-active{
+          padding: 0;
+          margin-left: 0;
+          .opinion-card{
+            width: 440px;
+            height: 605px;
+            transform: unset;
+            &__img{
+              height: 425px;
+            }
+            &__content{
+              padding: 15px;
+            }
+            &__title{
+              font-size: 33px;
+            }
+            &__props{
+              .props__item{
+                font-size: 12px;
+                &:after{
+                  height: 12px;
+                }
+                &:first-child{
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.adv-banner,
+.bitcoin-banner{
+  margin: 1px 0;
+  &__img{
+    border-radius: 25px;
+    overflow: hidden;
+    display: block;
+    img{
+      display: block;
+      width: 100%;
+    }
+    &--mob{
+      display: none;
+    }
+  }
+}
+
+.adv-banner{
+  &__img{
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid $dark;
+  }
+}
+
+.big-blog{
+  &__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:0 30px;
+    background: #FFFFFF;
+    border: 1px solid $dark;
+    border-radius: 25px;
+    padding: 30px;
+    &:hover{
+      color: inherit;
+    }
+  }
+  &__content{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    max-width: 570px;
+  }
+  &__props{
+    padding-top: 20px;
+    margin-top: auto;
+    .props__item{
+      &:after{
+        background-color: $black;
+      }
+    }
+  }
+  &__img{
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.subscribe{
+  color: #fff;
+  &--inner{
+    background-color: $dark;
+    border-radius: 25px;
+    padding-left: 30px;
+    margin: 30px 0;
+  }
+  &__inner{
+    padding: 77.5px 0;
+    position: relative;
+  }
+  &__content{
+    max-width: 55%;
+    position: relative;
+    z-index: 2;
+  }
+  &__img{
+    width: 40.5%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    img{
+      width: 100%;
+      border-radius: 0 0 25px 0;
+    }
+  }
+  &__desc{
+    margin-top: 20px;
+    max-width: 486px;
+  }
+  &__form{
+    margin-top: 60px;
+    position: relative;
+    &-mes{
+      display: none;
+    }
+    &--success{
+      .subscribe__form-mes{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #0EB349;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #fff;
+        svg{
+          margin-right: 5px;
+        }
+      }
+    }
+    .form-group{
+      label{
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+      }
+      input{
+        padding-right: 200px;
+        color: #fff;
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  &__btn{
+    border-radius: 15px;
+    width: 192px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.video,
+.podcast{
+  padding: 40px 0;
+  overflow: hidden;
+  .container{
+    padding: 0 30px;
+    max-width: 1340px;
+  }
+  &__title{
+    color: #fff;
+  }
+  &__slider{
+    margin-top: 30px;
+  }
+  &__all{
+    width: 100%;
+    height: 48px;
+    margin-top: 30px;
+    border-radius: 15px;
+  }
+  @media screen and (min-width: 992px){
+    .swiper{
+      &-wrapper{
+        transform: unset !important;
+        display: grid;
+        gap: 30px;
+      }
+      &-slide{
+        margin: 0;
+      }
+    }
+  }
+}
+
+.video{
+  @media screen and (min-width: 992px){
+    .swiper{
+      &-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .video-card--big{
+      grid-column: 1/4;
+    }
+  }
+}
+
+.podcast{
+  @media screen and (min-width: 992px){
+    .swiper{
+      &-wrapper{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+.follow{
+  &__inner{
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid $dark;
+    border-radius: 25px;
+  }
+  &__title{
+    text-align: center;
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+    max-width: 700px;
+  }
+  &__link{
+    margin: 10px 5px 0;
+    height: 81px;
+    padding: 0 30px;
+    font-weight: 400;
+    font-size: 55px;
+  }
+}
+
+.news{
+  &__block{
+    background: #FFFFFF;
+    border: 1px solid $dark;
+    border-radius: 25px;
+    padding: 30px;
+  }
+  &__subtitle{
+    margin-top: 30px;
+  }
+  &__props{
+    margin-top: 15px;
+    .props__item{
+      &::after{
+        background-color: $black;
+      }
+    }
+  }
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  &__item{
+    padding: 15px 0;
+    border-top: 1px solid $dark;
+    display: flex;
+    flex-direction: column;
+    &-props{
+      padding-top: 10px;
+      margin-top: auto;
+      .props__item{
+        font-size: 12px;
+        &::after{
+          height: 12px;
+          background-color: $black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .opinions{
+    .swiper{
+      &-slide{
+        width: 240px;
+        @media screen and (min-width: 992px){
+          .opinion-card{
+            transform: translateX(100px);
+          }
+          &-active{
+            .opinion-card{
+              transform: unset;
+              width: 340px;
+              height: 473px;
+              &__img{
+                height: 290px;
+              }
+              &__title{
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe{
+    &--inner{
+      padding-left: 0;
+    }
+    &__inner{
+      padding: 45px 30px;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 992px){
+  .opinions{
+    &__inner{
+      padding: 30px 20px;
+    }
+    &__slider{
+      margin-top: 30px;
+    }
+    .swiper{
+      &-wrapper{
+        align-items: stretch;
+      }
+      &-slide{
+        height: auto;
+        width: 300px;
+      }
+      &-button{
+        &-next,
+        &-prev{
+          width: 32px;
+          height: 32px;
+          svg{
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .opinion-card{
+      height: 100%;
+    }
+  }
+
+  .big-blog{
+    &__card{
+      grid-template-columns: 100%;
+    }
+    &__img{
+      order: -1;
+    }
+    &__title{
+      max-width: 100%;
+    }
+  }
+
+  .subscribe{
+    &--inner{
+      width: calc(100% + 60px);
+      margin: 15px 0 15px -30px;
+      &__inner{
+        min-height: 315px;
+      }
+    }
+    &__inner{
+      padding: 30px;
+    }
+    &__content{
+      min-width: 364px;
+    }
+    &__img{
+      width: 382.04px;
+    }
+    &__btn{
+      width: 177px;
+    }
+    .form-group{
+      input{
+        padding-right: 185px;
+      }
+    }
+  }
+
+  .video,
+  .podcast{
+    .swiper{
+      &-wrapper{
+        align-items: stretch;
+      }
+      &-slide{
+        width: 465px;
+        height: auto;
+      }
+    }
+  }
+
+  .follow{
+    &__items{
+      max-width: 550px;
+    }
+    &__link{
+      height: 55px;
+      font-size: 32px;
+    }
+  }
+
+  .blog{
+    &__items{
+      grid-template-columns: 100%;
+    }
+    .blog-card{
+      &:nth-child(even){
+        margin: -1px 0 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px){
+  .subscribe{
+    text-align: center;
+    &__inner{
+      padding: 30px 15px 0;
+    }
+    &__content{
+      min-width: unset;
+      max-width: 100%;
+    }
+    &__desc{
+      margin: 10px auto 0;
+      padding: 0 25px;
+    }
+    &__form{
+      margin-top: 30px;
+    }
+    .form-group{
+      input{
+        padding: 0 17px;
+        text-align: center;
+      }
+    }
+    &__btn{
+      position: static;
+      width: 100%;
+      margin-top: 5px;
+      height: 50px;
+    }
+    &__img{
+      position: static;
+      width: calc(100% + 30px);
+      margin: -10px -15px 0;
+    }
+  }
+
+  .news{
+    &__block{
+      padding: 30px 15px;
+    }
+    &__props{
+      margin-top: 10px;
+      .props__item{
+        font-size: 10px;
+        &::after{
+          height: 10px;
+        }
+      }
+    }
+    &__grid{
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+    &__item{
+      padding: 10px 0;
+      &-props{
+        padding-top: 10px;
+        .props__item{
+          font-size: 10px;
+          &::after{
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .main{
+    padding-bottom: 15px;
+    &__img{
+      img{
+        border-radius: 0;
+      }
+    }
+    &__title{
+      margin-top: 15px;
+      padding: 0;
+    }
+    &__props{
+      margin-top: 20px;
+
+    }
+  }
+
+  .props{
+    &__item{
+      font-size: 10px;
+      &:after{
+        height: 10px;
+      }
+    }
+  }
+
+  .opinions{
+    &__top{
+      align-items: flex-end;
+    }
+    &__title{
+      br{
+        display: unset;
+      }
+    }
+    &__nav{
+      padding-bottom: 5px;
+    }
+    .swiper{
+      &-slide{
+        width: 240px;
+      }
+    }
+  }
+
+  .adv-banner,
+  .bitcoin-banner{
+    &__img{
+      &--mob{
+        display: block;
+      }
+      &--dekstop{
+        display: none;
+      }
+    }
+  }
+
+  .big-blog{
+    &__card{
+      padding: 15px;
+    }
+    &__content{
+      padding-top: 15px;
+    }
+    &__img{
+      border-radius: 10px;
+    }
+    &__props{
+      padding-top: 15px;
+    }
+  }
+
+  .video,
+  .podcast{
+    padding: 30px 0;
+    .container{
+      padding: 0 15px;
+    }
+    .swiper{
+      &-slide{
+        width: 218px;
+      }
+    }
+  }
+
+  .podcast{
+    .swiper{
+      &-slide{
+        min-width: calc(50% - 7.5px);
+      }
+    }
+  }
+
+  .follow{
+    &__inner{
+      padding: 15px;
+    }
+    &__items{
+      max-width: 400px;
+      margin-top: 10px;
+    }
+    &__link{
+      height: 32px;
+      font-size: 20px;
+      margin: 5px 2.5px 0;
+    }
+  }
+  .subscribe{
+    &--inner{
+      width: calc(100% + 30px);
+      margin: 30px 0 30px -15px;
+    }
+  }
+}
+
+
