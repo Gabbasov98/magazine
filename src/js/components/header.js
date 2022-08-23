@@ -1,5 +1,9 @@
-$(".header__search-toggle").click(function () {
-    $(this).toggleClass("header__search-toggle--active")
+$(".header__search-open").click(function () {
+    $(this).addClass("header__search-open--active")
+})
+
+$(".header__search-close").click(function () {
+    $(".header__search-open").removeClass("header__search-open--active")
 })
 
 $(".page-nav__show").click(function () {

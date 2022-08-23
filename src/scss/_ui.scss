@@ -125,6 +125,14 @@
     animation: 2.5s  infinite loaderAnim both;
 }
 
+.gray-to-color{
+    filter: grayscale(100%);
+    transition: all .3s;
+    &:hover{
+        filter: grayscale(0%);
+    }
+}
+
 @keyframes loaderAnim{
     0%  {
         opacity: 1;
@@ -134,5 +142,11 @@
     }
     100%  {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .gray-to-color{
+        filter: grayscale(0%);
     }
 }

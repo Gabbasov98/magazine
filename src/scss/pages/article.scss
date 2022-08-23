@@ -76,9 +76,10 @@
   &--dark{
     .article-socials{
       &__item{
-        padding: 0 13px 0 7.5px;
+        padding: 0 13px 0 5px;
         border: 1px solid $black;
         border-radius: 99px;
+        font-size: 18px;
         &:hover{
           color: #fff;
           span{
@@ -175,13 +176,17 @@
     background: #FFFFFF;
     border-radius: 25px;
     padding: 30px;
+    &>p{
+      font-family: $font2;
+    }
+    &>h2{
+      margin-bottom: 40px;
+    }
   }
   &__title{
     margin-bottom: 40px;
   }
-  h2{
-    margin-bottom: 40px;
-  }
+
   p{
     padding: 0 180px;
     &:not(:last-child){
@@ -410,8 +415,10 @@
     &__title{
       margin-bottom: 30px;
     }
-    h2{
-      margin-bottom: 30px;
+    &__inner{
+      &>h2{
+        margin-bottom: 30px;
+      }
     }
     p{
       padding: 0 140px;
@@ -663,6 +670,9 @@
       width: calc(100% + 30px);
       margin: 30px -15px 0;
     }
+    .mob-d-none{
+      display: none;
+    }
   }
 
   .article-socials{
@@ -695,9 +705,9 @@
   .article{
     &__inner{
       padding: 30px 15px;
-    }
-    h2{
-      font-size: 30px;
+      &>h2{
+        font-size: 30px;
+      }
     }
     blockquote{
       font-size: 23px;

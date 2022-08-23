@@ -9,10 +9,22 @@
   }
   &__img{
     position: relative;
+    &:hover{
+      img{
+        filter: grayscale(0%);
+      }
+      .main__play{
+        path{
+          fill: $primary;
+        }
+      }
+    }
     img{
+      transition: all .3s;
       width: 100%;
       display: block;
       border-radius: 25px;
+      filter: grayscale(100%);
     }
   }
   &__title{
@@ -66,12 +78,8 @@
   }
   &__items{
     display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  .blog-card{
-    &:nth-child(even){
-      margin-left: -1px;
-    }
+    grid-template-columns: repeat(2, calc(50% - 0.5px));
+    gap: 1px;
   }
   &__link{
     width: 100%;
@@ -82,10 +90,10 @@
 }
 
 .opinions{
+  margin-top: 1px;
   &__inner{
     padding: 40px 30px;
     background: #FFFFFF;
-    border: 1px solid $dark;
     border-radius: 25px;
     overflow: hidden;
   }
@@ -106,7 +114,16 @@
   &__slider{
     margin-top: 40px;
   }
+  .opinion-card{
+    transition: all .3s;
+    position: relative;
+    z-index: 2;
+  }
   .swiper{
+    &-wrapper{
+      align-items: stretch;
+      height: 605px;
+    }
     &-button{
       &-prev,
       &-next{
@@ -126,13 +143,16 @@
     }
     &-slide{
       width: 300px;
+      height: auto;
       &-prev{
-        opacity: 0;
+        //opacity: 0;
+        transform: translateX(-140px);
       }
       @media screen and (min-width: 992px){
         .opinion-card{
           transform: translateX(140px);
         }
+        &-prev,
         &-active{
           padding: 0;
           margin-left: 0;
@@ -148,6 +168,7 @@
             }
             &__title{
               font-size: 33px;
+              -webkit-line-clamp: 3;
             }
             &__props{
               .props__item{
@@ -193,16 +214,37 @@
 }
 
 .big-blog{
+  margin: 1px 0;
   &__card{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:0 30px;
     background: #FFFFFF;
-    border: 1px solid $dark;
     border-radius: 25px;
     padding: 30px;
     &:hover{
       color: inherit;
+      .big-blog__title{
+        color: $primary;
+        p{
+          text-decoration: underline;
+        }
+        span{
+          color: $black;
+          text-decoration: none;
+        }
+      }
+      .big-blog__img{
+        background: $primary;
+        img{
+          filter: grayscale(0%);
+        }
+      }
+      .big-blog__play{
+        path{
+          fill: $primary;
+        }
+      }
     }
   }
   &__content{
@@ -212,6 +254,9 @@
   }
   &__title{
     max-width: 570px;
+    p{
+      display: inline;
+    }
   }
   &__props{
     padding-top: 20px;
@@ -223,13 +268,17 @@
     }
   }
   &__img{
+    background: #D5D5D5;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    transition: all .3s;
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
+      transition: all .3s;
     }
   }
   &__play{
@@ -309,6 +358,9 @@
         color: #fff;
         background-color: transparent;
         border-color: rgba(255, 255, 255, 0.5);
+        &:focus{
+          background: #030A4A;
+        }
       }
     }
   }
@@ -380,10 +432,10 @@
 }
 
 .follow{
+  margin: 1px 0;
   &__inner{
     padding: 30px;
     background: #FFFFFF;
-    border: 1px solid $dark;
     border-radius: 25px;
   }
   &__title{
@@ -409,7 +461,7 @@
 .news{
   &__block{
     background: #FFFFFF;
-    border: 1px solid $dark;
+    margin: 1px 0;
     border-radius: 25px;
     padding: 30px;
   }
@@ -452,12 +504,16 @@
 @media screen and (max-width: 1150px){
   .opinions{
     .swiper{
+      &-wrapper{
+        height: 473px;
+      }
       &-slide{
         width: 240px;
         @media screen and (min-width: 992px){
           .opinion-card{
             transform: translateX(100px);
           }
+          &-prev,
           &-active{
             .opinion-card{
               transform: unset;
@@ -484,11 +540,16 @@
       padding: 45px 30px;
     }
   }
-
-
 }
 
 @media screen and (max-width: 992px){
+  .main{
+    &__img{
+      img{
+        filter: grayscale(0%);
+      }
+    }
+  }
   .opinions{
     &__inner{
       padding: 30px 20px;
@@ -499,6 +560,7 @@
     .swiper{
       &-wrapper{
         align-items: stretch;
+        height: unset;
       }
       &-slide{
         height: auto;
@@ -573,6 +635,16 @@
     }
   }
 
+  .video{
+    .video-card--big{
+      .video-card{
+        &__title{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
   .follow{
     &__items{
       max-width: 550px;
@@ -586,11 +658,6 @@
   .blog{
     &__items{
       grid-template-columns: 100%;
-    }
-    .blog-card{
-      &:nth-child(even){
-        margin: -1px 0 0 0;
-      }
     }
   }
 }
@@ -749,6 +816,16 @@
     }
   }
 
+  .video{
+    .video-card--big{
+      .video-card{
+        &__title{
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
   .podcast{
     .swiper{
       &-slide{
@@ -762,19 +839,38 @@
       padding: 15px;
     }
     &__items{
-      max-width: 400px;
+      max-width: 360px;
       margin-top: 10px;
     }
     &__link{
       height: 32px;
       font-size: 20px;
       margin: 5px 2.5px 0;
+      padding: 0 15px;
     }
   }
+
   .subscribe{
     &--inner{
       width: calc(100% + 30px);
       margin: 30px 0 30px -15px;
+    }
+    &__form{
+      .form-group{
+        input{
+          text-align: center;
+        }
+        label{
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .news{
+    &__title{
+      font-size: 25px;
     }
   }
 }

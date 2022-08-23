@@ -1,17 +1,40 @@
 @import "../vars";
 .blog-card{
   background: #FFFFFF;
-  border: 1px solid $dark;
   border-radius: 25px;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  &:hover{
+    background: #FFEBE0;
+    .blog-card{
+      &__play{
+        path{
+          fill: $primary;
+        }
+      }
+      &__img{
+        filter: grayscale(0%);
+      }
+      &__title{
+        color: $primary;
+        p{
+          text-decoration: underline;
+        }
+        span{
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__img{
     flex-shrink: 0;
     height: 408px;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    filter: grayscale(100%);
     img{
       width: 100%;
       height: 100%;
@@ -20,6 +43,9 @@
   }
   &__title{
     margin-top: 20px;
+    p{
+      display: inline;
+    }
   }
   &__props{
     padding-top: 20px;
@@ -46,14 +72,39 @@
   border-radius: 15px;
   overflow: hidden;
   height: 470px;
+  &:hover{
+    background: #FFEBE0;
+    .opinion-card{
+      &__img{
+        background-color: $primary;
+        img{
+          filter: grayscale(0%);
+        }
+      }
+      &__title{
+        color: $primary;
+        p{
+          text-decoration: underline;
+        }
+        span{
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__img{
     flex-shrink: 0;
     height: 290px;
     overflow: hidden;
+    background: #D5D5D5;
+    transition: all .3s;
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
+      transition: all .3s;
     }
   }
   &__content{
@@ -67,6 +118,9 @@
     display: -webkit-box;
     -webkit-line-clamp:4;
     -webkit-box-orient: vertical;
+    p{
+      display: inline;
+    }
   }
   &__props{
     margin-top: auto;
@@ -92,6 +146,7 @@
   border-radius: 15px;
   overflow: hidden;
   color: #fff;
+  transition: all .3s;
   &:hover{
     color: #fff;
   }
@@ -102,6 +157,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
+      transition: all .3s;
     }
   }
   &__content{
@@ -113,13 +170,48 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    p{
+      display: inline;
+    }
   }
 }
 
 .video-card{
+  &:hover{
+    background: $primary;
+    .video-card{
+      &__icon{
+        path{
+          fill: $black;
+        }
+      }
+      &__play{
+        path{
+          fill: $primary;
+        }
+      }
+      &__img{
+        background-color: $primary;
+        img{
+          filter: grayscale(0%);
+        }
+      }
+      &__title{
+        color: $black;
+        p{
+          text-decoration: underline;
+        }
+        span{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__img{
     height: 247px;
     position: relative;
+
   }
   &__play{
     position: absolute;
@@ -185,6 +277,26 @@
 }
 
 .podcast-card{
+  &:hover{
+    background: $primary !important;
+    .podcast-card{
+      &__img{
+        img{
+          filter: grayscale(0%);
+        }
+      }
+      &__title{
+        color: $black;
+        p{
+          text-decoration: underline;
+        }
+        span{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   &__img{
     height: 465px;
   }
@@ -245,12 +357,21 @@
 @media screen and (max-width: 992px){
   .opinion-card{
     height: unset;
+    &__img{
+      background-color: $primary;
+      img{
+        filter: grayscale(0%);
+      }
+    }
   }
 
   .podcast-card,
   .video-card{
     &__img{
       height: 338px;
+      img{
+        filter: grayscale(0%);
+      }
     }
     &__content{
       padding: 15px;
@@ -277,14 +398,15 @@
   }
 
   .blog-card{
+    &__title{
+      margin-top: 20px;
+      @media screen and (max-width: 576px){
+        font-size: 30px;
+      }
+    }
     &__img{
       height: unset;
-      &__title{
-        margin-top: 20px;
-        @media screen and (max-width: 576px){
-          font-size: 30px;
-        }
-      }
+      filter: grayscale(0%);
       img{
         border-radius: 15px;
       }
