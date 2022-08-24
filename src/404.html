@@ -1,0 +1,42 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"404", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+        </header>
+        <main class="content">
+
+            <section class="error404">
+                <div class="container">
+                    <div class="error404__content">
+                        <div class="error404__img">
+                            <img src="img/404.gif" alt="">
+                        </div>
+                        <div class="error404__title display1">Page Not Found</div>
+                        <div class="error404__desc text-l">
+                            <p>We can’t find the page you’re looking for. It has likely either moved or no longer exists, or the website address is incorrect.</p>
+                            <p>We’re sorry for any inconvenience. <br> Go back to Magazine by Cointelegraph</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bitcoin-banner">
+                    @@include('components/page-blocks/_bitcoin-banner.html')
+                </div>
+
+                <div class="error404__news">
+                    <div class="container">
+                        @@include('components/page-blocks/_news-popular.html')
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
