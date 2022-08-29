@@ -33,11 +33,13 @@
   }
   &__img{
     position: relative;
+    max-height: 560px;
+    overflow: hidden;
+    border-radius: 25px;
     img{
       transition: all .3s;
       width: 100%;
       display: block;
-      border-radius: 25px;
       filter: grayscale(100%);
     }
   }
@@ -144,13 +146,13 @@
     transition: all .3s;
     position: relative;
     z-index: 2;
-    width: 300px;
-    height: 470px;
+    width: 240px;
+    height: 400px;
   }
   .swiper{
     &-wrapper{
       align-items: stretch;
-      height: 610px;
+      height: 473px;
     }
     &-button{
       &-prev,
@@ -170,32 +172,31 @@
       }
     }
     &-slide{
-      width: 300px;
+      width: 240px;
       height: auto;
       &-prev{
-        //opacity: 0;
         transform: translateX(-140px);
       }
       @media screen and (min-width: 992px){
         .opinion-card{
-          transform: translateX(140px);
+          transform: translateX(100px);
         }
         &-prev,
         &-active{
           padding: 0;
           margin-left: 0;
           .opinion-card{
-            width: 440px;
-            height: 610px;
+            width: 341px;
+            height: 473px;
             transform: unset;
             &__img{
-              height: 425px;
+              height: 290px;
             }
             &__content{
               padding: 15px;
             }
             &__title{
-              font-size: 33px;
+              font-size: 26px;
               -webkit-line-clamp: 3;
             }
             &__props{
@@ -245,7 +246,7 @@
   margin: 1px 0;
   &__card{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr .77fr;
     gap:0 30px;
     background: #FFFFFF;
     border-radius: 25px;
@@ -409,7 +410,7 @@
   overflow: hidden;
   .container{
     padding: 0 30px;
-    max-width: 1340px;
+    max-width: 1220px;
   }
   &__title{
     color: #fff;
@@ -480,10 +481,10 @@
   }
   &__link{
     margin: 10px 5px 0;
-    height: 81px;
+    height: 70px;
     padding: 0 30px;
     font-weight: 400;
-    font-size: 55px;
+    font-size: 45px;
   }
 }
 

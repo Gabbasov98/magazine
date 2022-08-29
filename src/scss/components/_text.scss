@@ -13,25 +13,25 @@
 }
 
 .display1{
-  font-size: 56px;
+  font-size: 44px;
 }
 
 .article h2,
 .display2{
-  font-size: 45px;
+  font-size: 36px;
 }
 
 .display3{
-  font-size: 33px;
+  font-size: 26px;
 }
 
 .display4{
-  font-size: 25px;
+  font-size: 21px;
 }
 
 .text-l{
   font-weight: 500;
-  font-size: 35px;
+  font-size: 28px;
   line-height: 130%;
 }
 
@@ -49,47 +49,16 @@
 
 .body-l{
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 140%;
   p{
     line-height: inherit;
     &:not(:last-child){
-      margin-bottom: 27px;
+      margin-bottom: 20px;
     }
   }
 }
 
-@media screen and (max-width: 1150px){
-  .display1{
-    font-size: 44px;
-  }
-
-  .article h2,
-  .display2{
-    font-size: 36px;
-  }
-
-  .display3{
-    font-size: 26px;
-  }
-
-  .display4{
-    font-size: 21px;
-  }
-
-  .text-l{
-    font-size: 28px;
-  }
-
-  .body-l{
-    font-size: 20px;
-    p{
-      &:not(:last-child){
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 992px){
   .display1{

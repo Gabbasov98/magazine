@@ -74,55 +74,9 @@
   font-weight: 500;
   font-size: 20px;
   &--dark{
-    .article-socials{
-      &__item{
-        padding: 0 13px 0 5px;
-        border: 1px solid $black;
-        border-radius: 99px;
-        font-size: 18px;
-        &:hover{
-          color: #fff;
-          span{
-            text-decoration: none;
-          }
-        }
-        @media screen and (min-width: 576px){
-          &:hover{
-            path{
-              fill: #fff;
-            }
-          }
-          &--fb{
-            &:hover{
-              background-color: #1877F2;
-              border-color: #1877F2;
-            }
-          }
-          &--tg{
-            &:hover{
-              background-color: #0088CC;
-              border-color: #0088CC;
-            }
-          }
-          &--tw{
-            &:hover{
-              background-color: #1DA1F2;
-              border-color: #1DA1F2;
-            }
-          }
-          &--rd{
-            &:hover{
-              background-color:$primary;
-              border-color:$primary;
-            }
-          }
-        }
-
-      }
+    path{
+      fill: $black ;
     }
-      path{
-        fill: $black ;
-      }
   }
   &__item{
     display: flex;
@@ -177,35 +131,37 @@
     border-radius: 25px;
     padding: 30px;
     &>p{
-      font-family: $font2;
+      font-weight: 450;
+      font-family: $font3;
     }
     &>h2{
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
   &__title{
-    margin-bottom: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
   }
-
   p{
-    padding: 0 180px;
+    padding: 0 160px;
     &:not(:last-child){
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     a{
       color: $primary;
     }
     &[data-hint]{
       position: relative;
-      padding-right: 270px;
+      padding-right: 170px;
+      padding-bottom: 26px;
       &::after{
         content: attr(data-hint);
         position: absolute;
         right: 0;
         top: 0;
-        width: 238px;
+        width: 140px;
         opacity: 0.6;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 140%;
         padding-top: 10px;
         border-top: 1px solid rgba(23, 26, 28, 0.6);
@@ -214,33 +170,33 @@
     }
   }
   blockquote{
-    padding: 30px;
+    padding:0 30px;
     position: relative;
     display: flex;
     font-weight: 500;
-    font-size: 50px;
     line-height: 120%;
     color: $primary;
+    font-size: 38px;
     &::before{
       content: '';
       display: block;
-      width: 40px;
-      height: 64px;
+      width: 30px;
+      height: 50px;
       background-image: url(../img/quote.svg);
       background-size: 100% auto;
       background-position: center;
       background-repeat: no-repeat;
-      margin-right: 20px;
+      margin-right: 15px;
       flex-shrink: 0;
     }
     &:not(:last-child){
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
   &__img{
     padding: 30px 0;
     &:not(:last-child){
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     img{
       border-radius: 5px;
@@ -261,29 +217,29 @@
   }
   &__group{
     line-height: inherit;
-    padding: 0 180px 30px;
+    padding: 0 160px 30px;
     &:not(:last-child){
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     &>p{
       font-family: $font2;
     }
     &>h2{
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     p{
       padding: 0 !important;
     }
     &--hint{
       position: relative;
-      padding-right: 270px;
-      padding-bottom: 0;
+      padding-right: 372px;
     }
     &-img{
       position: absolute;
-      right: 0;
-      top: 90px;
-      width: 238px;
+      //right: 0;
+      left: calc(100% - 342px);
+      top: 76px;
+      width: 182px;
       img{
         width: 100%;
         display: block;
@@ -302,7 +258,7 @@
   .bitcoin-banner{
     padding: 15px 0;
     &:not(:last-child){
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     &__img{
       border-radius: 0;
@@ -311,15 +267,18 @@
 
   .article-socials{
     justify-content: unset;
-    width: calc(100% - 360px);
-    margin: 0 auto 40px;
+    width: calc(100% - 320px);
+    margin: 0 auto 30px;
     &__item{
-      margin: 0 10px 0 0;
+      margin: 0 20px 0 0;
     }
   }
 
   .author{
-    margin-top: 70px;
+    margin-top: 60px;
+    &__img{
+      width: 294px;
+    }
   }
 
   .blog{
@@ -349,8 +308,8 @@
 }
 
 .bitcoin{
-  width: calc(100% - 360px);
-  margin: 0 auto 40px;
+  width: calc(100% - 320px);
+  margin: 0 auto 30px;
   &__img{
     display: none;
     @media screen and (min-width: 1150px){
@@ -370,8 +329,8 @@
   padding: 30px;
   border-radius: 15px;
   border: 1px solid $dark;
-  width: calc(100% - 360px);
-  margin: 0 auto 40px;
+  width: calc(100% - 320px);
+  margin: 0 auto 30px;
   &__items{
     margin-top: 30px;
     display: grid;
@@ -405,8 +364,8 @@
 }
 
 .tags{
-  width: calc(100% - 360px);
-  margin: -10px auto 40px;
+  width: calc(100% - 320px);
+  margin: -10px auto 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -427,6 +386,53 @@
     color: $black;
     background-color: $primary;
     border-color: $primary;
+  }
+}
+
+.table-block{
+  padding: 30px 160px 0;
+  text-align: left;
+  margin-bottom: 30px;
+  &__hint{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    font-family: $font2;
+    opacity: 0.6;
+  }
+  table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    min-width: 100%;
+  }
+  th,td{
+    &:nth-child(1){
+      width: 45px;
+    }
+    &:nth-child(3){
+      width: 181px;
+      padding: 0 20px;
+    }
+    &:nth-child(4){
+      width: 160px;
+      text-align: right;
+    }
+  }
+  th{
+    height: 68px;
+    border-bottom: 4px solid $primary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  td{
+    font-family: $font2;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(48, 50, 71, 0.3);
   }
 }
 
@@ -451,19 +457,8 @@
   }
 
   .article{
-    &__title{
-      margin-bottom: 30px;
-    }
-    &__inner{
-      &>h2{
-        margin-bottom: 30px;
-      }
-    }
     p{
       padding: 0 140px;
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
       &[data-hint]{
         padding-right: 210px;
         &::after{
@@ -474,32 +469,14 @@
     }
     blockquote{
       padding:0 26px;
-      font-size: 38px;
-      &::before{
-        width: 30px;
-        height: 50px;
-        margin-right: 15px;
-      }
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
     }
     &__img{
-      &:not(:last-child){
-        margin-bottom: 40px;
-      }
       &-desc{
         font-size: 14px;
       }
     }
     &__group{
       padding: 0 140px 30px;
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
-      &>h2{
-        margin-bottom: 30px;
-      }
       &--hint{
         padding-right: 210px;
         padding-bottom: 0;
@@ -513,9 +490,6 @@
       }
     }
     .bitcoin-banner{
-      &:not(:last-child){
-        margin-bottom: 30px;
-      }
       &__img{
         border-radius: 5px;
       }
@@ -523,23 +497,16 @@
 
     .article-socials{
       width: calc(100% - 280px);
-      margin-bottom: 30px;
-    }
-
-    .author{
-      margin-top: 60px;
     }
   }
 
   .tags,
   .article-suggest{
     width: calc(100% - 280px);
-    margin-bottom: 30px;
   }
 
   .bitcoin{
     width: calc(100% - 280px);
-    margin-bottom: 30px;
     &__img{
       @media screen and (min-width: 992px){
         &--l{
@@ -547,6 +514,11 @@
         }
       }
     }
+  }
+
+  .table-block{
+    padding-left: 140px;
+    padding-right: 140px;
   }
 }
 
@@ -619,6 +591,7 @@
       padding: 0;
       &[data-hint]{
         padding-right: 0;
+        padding-bottom: 0;
         &::after{
           position: static;
           width: 100%;
@@ -685,8 +658,57 @@
   .tags{
     width: 100%;
   }
+
+  .author{
+    &__img{
+      width: 275px;
+    }
+  }
+
+  .table-block{
+    padding-left: 0;
+    padding-right: 0;
+    th{
+      font-size: 14px;
+      height: 64px;
+    }
+    td{
+      font-size: 16px;
+    }
+  }
 }
 
+@media screen and (max-width: 650px) {
+  .article{
+    .author{
+      &__img{
+        width: 100%;
+      }
+    }
+  }
+
+  .table-block{
+    th,td{
+      &:nth-child(1){
+        width: 40px;
+      }
+      &:nth-child(3){
+        width: 76px;
+        padding: 0 10px;
+      }
+      &:nth-child(4){
+        width: 70px;
+      }
+    }
+    th{
+      font-size: 12px;
+      height: 86px;
+    }
+    td{
+      font-size: 14px;
+    }
+  }
+}
 
 @media screen and (max-width: 576px){
   .article-top{
@@ -721,6 +743,7 @@
     &::before{
       content: "Share";
       margin-right: 5px;
+      font-weight: 700;
     }
     &__item{
       margin: 0 5px;

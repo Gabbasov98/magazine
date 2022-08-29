@@ -17,7 +17,7 @@ $(document).mouseup(function (e){
     }
 });
 
-$(".header__burger").click(function() {
+$(".header__menu-toggler").click(function() {
     $("body").toggleClass("fixed-body")
     $(".header").toggleClass("header--active")
 })
