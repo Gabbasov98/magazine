@@ -265,6 +265,12 @@
     &:not(:last-child){
       margin-bottom: 40px;
     }
+    &>p{
+      font-family: $font2;
+    }
+    &>h2{
+      margin-bottom: 40px;
+    }
     p{
       padding: 0 !important;
     }
@@ -320,8 +326,25 @@
     margin-top: 60px;
   }
 
+  .blog-card{
+    border: 1px solid $dark;
+    &:nth-child(even){
+      margin-left: -2px;
+    }
+    p{
+      padding: 0 !important;
+    }
+  }
+
   .news-inner{
     margin-top: 30px;
+  }
+
+  .news__subtitle ,
+  .news__item{
+    p{
+      padding: 0 !important;
+    }
   }
 }
 
@@ -354,6 +377,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:20px 30px;
+  }
+  &__subtitle{
+    display: block;
+    p{
+      display: inline;
+      padding: 0 !important;
+    }
+    &:hover{
+      color: $primary;
+      span{
+        color: $black;
+      }
+      p{
+        text-decoration: underline;
+      }
+    }
   }
   &__props{
     margin-top: 10px;
@@ -456,6 +495,9 @@
     &__group{
       padding: 0 140px 30px;
       &:not(:last-child){
+        margin-bottom: 30px;
+      }
+      &>h2{
         margin-bottom: 30px;
       }
       &--hint{
@@ -727,6 +769,9 @@
         img{
           width: 100%;
         }
+      }
+      &>h2{
+        font-size: 30px;
       }
     }
     .bitcoin-banner{

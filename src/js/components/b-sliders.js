@@ -3,6 +3,7 @@ function opinionSlider() {
         slidesPerView: "auto",
         spaceBetween: 0,
         loop: true,
+        speed: 300,
         navigation: {
             nextEl: '.opinions .swiper-button-next',
             prevEl: '.opinions .swiper-button-prev',

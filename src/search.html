@@ -3,9 +3,13 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+            @@include('components/page-blocks/_header.html',{"active":"search", "nav":""})
         </header>
+
         <main class="content">
+            <div class="container">
+                <div class="search__text display3">123 results found for "BITCOIN"</div>
+            </div>
             <section class="big-blog">
                 @@include('components/page-blocks/_big-blog.html',{"img":"blog3","video":"","title":"<span>Features</span> <p>Old-school photographers grapple with NFTs: New world, new rules</p>"})
             </section>
@@ -33,7 +37,15 @@
             <section class="big-blog">
                 @@include('components/page-blocks/_big-blog.html',{"img":"blog3","video":"","title":"<span>Features</span> <p>Old-school photographers grapple with NFTs: New world, new rules</p>"})
             </section>
+
+            <div class="container">
+                <a href="" class="search__more btn btn-orange">I WANT MORE</a>
+            </div>
         </main>
+
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
     </div>
 
     @@include('components/page-blocks/_scripts.html')

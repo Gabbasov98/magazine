@@ -3,7 +3,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            @@include('components/page-blocks/_header.html',{"active":"", "nav":""})
+            @@include('components/page-blocks/_header.html',{"active":"search", "nav":""})
         </header>
         <main class="content">
 
@@ -23,6 +23,9 @@
 
 
         </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
     </div>
 
     @@include('components/page-blocks/_scripts.html')

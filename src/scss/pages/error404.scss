@@ -23,6 +23,12 @@
         margin-bottom: 42px;
       }
     }
+    a{
+      color: $primary;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
   .bitcoin-banner{
     margin-top: 100px;
