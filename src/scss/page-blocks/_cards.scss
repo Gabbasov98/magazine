@@ -408,7 +408,7 @@
   .blog-card{
     &__title{
       margin-top: 20px;
-      @media screen and (max-width: 576px){
+      @media screen and (min-width: 576px){
         font-size: 30px;
       }
     }

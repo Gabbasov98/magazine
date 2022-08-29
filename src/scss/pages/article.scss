@@ -132,7 +132,8 @@
     padding: 30px;
     &>p{
       font-weight: 450;
-      font-family: $font3;
+      font-family: $font2;
+      font-variation-settings: "wght" 450;
     }
     &>h2{
       margin-bottom: 30px;
@@ -666,8 +667,7 @@
   }
 
   .table-block{
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     th{
       font-size: 14px;
       height: 64px;
@@ -771,7 +771,7 @@
     &__inner{
       padding: 30px 15px;
       &>h2{
-        font-size: 30px;
+        font-size: 23px;
       }
     }
     blockquote{
@@ -795,6 +795,7 @@
       }
       &>h2{
         font-size: 30px;
+        margin-bottom: 20px;
       }
     }
     .bitcoin-banner{
@@ -819,6 +820,9 @@
     &__items{
       margin-top: 15px;
       gap: 15px;
+    }
+    &__subtitle{
+      font-size: 16px;
     }
   }
 }

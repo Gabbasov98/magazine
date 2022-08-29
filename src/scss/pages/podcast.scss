@@ -9,6 +9,7 @@
     background-color: #fff;
     color: $black;
     padding: 30px;
+    border-radius: 25px;
     &__img{
       height: 512px;
       img{
@@ -236,7 +237,7 @@
         }
       }
       &__title{
-        font-size: 19px;
+        font-size: 18px;
         margin-top: 15px;
       }
     }
