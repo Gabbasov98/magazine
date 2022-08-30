@@ -223,7 +223,9 @@
       margin-bottom: 30px;
     }
     &>p{
+      font-weight: 450;
       font-family: $font2;
+      font-variation-settings: "wght" 450;
     }
     &>h2{
       margin-bottom: 30px;
@@ -485,6 +487,7 @@
       &-img{
         width: 182px;
         top: 70px;
+        left: calc(100% - 182px);
       }
       &-desc{
         font-size: 14px;

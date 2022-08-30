@@ -192,7 +192,7 @@
 
 @media screen and (max-width: 992px){
   .header{
-    padding: 15px 0;
+    padding: 15px 0 0;
     &::before{
       height: 158px;
     }
@@ -272,15 +272,15 @@
       transition: all .3s;
       opacity: 0;
       pointer-events: none;
-      padding: 0 15px 50px;
+      padding: 15px 15px 50px;
       display: flex;
       flex-direction: column;
       z-index: 14;
       position: fixed;
-      top: 178px;
+      top: 163px;
       left: 0;
       width: 100%;
-      height: calc(100vh - 178px);
+      height: calc(100vh - 163px);
       background-color: $dark;
       overflow-y: auto;
       &::-webkit-scrollbar {
@@ -333,7 +333,7 @@
 
 @media screen and (max-width: 576px){
   .header{
-    padding: 10px 0;
+    padding: 10px 0 0;
     &::before{
       height: calc(100% + 22px);
     }
@@ -347,15 +347,17 @@
       }
     }
     &__mob{
-      top: 135px;
-      height: calc(100vh - 135px);
-      padding-left: 8px;
-      padding-right: 8px;
+      top: 120px;
+      height: calc(100vh - 120px);
+      padding: 8px 8px 50px;
     }
     &__socials{
       &-btn{
         margin-left: 15px;
       }
+    }
+    &__menu-toggler{
+      margin-top: 10px;
     }
   }
 
